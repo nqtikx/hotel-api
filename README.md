@@ -1,4 +1,3 @@
-````markdown
 # Hotel API
 
 RESTful API для работы с отелями.
@@ -7,9 +6,9 @@ RESTful API для работы с отелями.
 
 - [Технологии](#технологии)
 - [Функционал](#функционал)
-- [Запуск приложения](#запуск-приложения)  
-  - [По умолчанию (H2)](#по-умолчанию-h2)  
-  - [Профиль MySQL](#профиль-mysql)  
+- [Запуск приложения](#запуск-приложения)
+    - [По умолчанию (H2)](#по-умолчанию-h2)
+    - [Профиль MySQL](#профиль-mysql)
 - [Переменные окружения](#переменные-окружения)
 - [Swagger / OpenAPI](#swagger--openapi)
 - [Endpoints](#endpoints)
@@ -31,20 +30,20 @@ RESTful API для работы с отелями.
 ## Функционал
 
 1. **GET** `/property-view/hotels`  
-   Краткий список всех отелей.  
+   Краткий список всех отелей.
 2. **GET** `/property-view/hotels/{id}`  
-   Полная информация по конкретному отелю.  
+   Полная информация по конкретному отелю.
 3. **GET** `/property-view/search`  
-   Поиск по параметрам: `name`, `brand`, `city`, `country`, `amenities`.  
+   Поиск по параметрам: `name`, `brand`, `city`, `country`, `amenities`.
 4. **POST** `/property-view/hotels`  
-   Создание нового отеля.  
+   Создание нового отеля.
 5. **POST** `/property-view/hotels/{id}/amenities`  
-   Добавление списка удобств к существующему отелю.  
+   Добавление списка удобств к существующему отелю.
 6. **GET** `/property-view/histogram/{param}`  
-   Группировка по `brand`, `city`, `country` или `amenities`.  
+   Группировка по `brand`, `city`, `country` или `amenities`.
 
 > **Порт:** 8092  
-> **URL префикс:** `/property-view`
+> **URL-префикс:** `/property-view`
 
 ---
 
@@ -54,7 +53,7 @@ RESTful API для работы с отелями.
 
 ```bash
 mvn clean spring-boot:run
-````
+```
 
 * **База:** H2 in-memory
 * **URL:** `jdbc:h2:mem:hoteldb`
