@@ -1,0 +1,485 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: user
+      changes:
+
+        # Hotel 1
+        - insert:
+            tableName: hotel
+            columns:
+              - column: { name: id,           valueNumeric: 1 }
+              - column: { name: name,         value: "DoubleTree by Hilton Minsk" }
+              - column: { name: description,  value: "The DoubleTree by Hilton Hotel Minsk offers 193 luxurious rooms in the Belorussian capital and stunning views of Minsk city from the hotel's 20th floor ..." }
+              - column: { name: brand,        value: "Hilton" }
+              - column: { name: house_number, valueNumeric: 9 }
+              - column: { name: street,       value: "Pobediteley Avenue" }
+              - column: { name: city,         value: "Minsk" }
+              - column: { name: country,      value: "Belarus" }
+              - column: { name: post_code,    value: "220004" }
+              - column: { name: phone,        value: "+375 17 309-80-00" }
+              - column: { name: email,        value: "doubletreeminsk.info@hilton.com" }
+              - column: { name: check_in,     value: "14:00" }
+              - column: { name: check_out,    value: "12:00" }
+
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id,    valueNumeric: 1 }
+              - column: { name: amenity,     value: "Free parking" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id,    valueNumeric: 1 }
+              - column: { name: amenity,     value: "Free WiFi" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id,    valueNumeric: 1 }
+              - column: { name: amenity,     value: "Fitness center" }
+
+        # Hotel 2
+        - insert:
+            tableName: hotel
+            columns:
+              - column: { name: id,           valueNumeric: 2 }
+              - column: { name: name,         value: "BonHotel Minsk" }
+              - column: { name: description,  value: "Уютный отель с баром, бесплатным WiFi и платной парковкой, рядом с метро." }
+              - column: { name: brand,        value: "BonHotel" }
+              - column: { name: house_number, valueNumeric: 2 }
+              - column: { name: street,       value: "Prytytskogo Street" }
+              - column: { name: city,         value: "Minsk" }
+              - column: { name: country,      value: "Belarus" }
+              - column: { name: post_code,    value: "220004" }
+              - column: { name: phone,        value: "+375 17 389-73-88" }
+              - column: { name: email,        value: "info@bonhotel.by" }
+              - column: { name: check_in,     value: "14:00" }
+              - column: { name: check_out,    value: "12:00" }
+
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 2 }
+              - column: { name: amenity,  value: "Free WiFi" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 2 }
+              - column: { name: amenity,  value: "Parking" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 2 }
+              - column: { name: amenity,  value: "Restaurant" }
+
+        # Hotel 3
+        - insert:
+            tableName: hotel
+            columns:
+              - column: { name: id,           valueNumeric: 3 }
+              - column: { name: name,         value: "Renaissance Minsk Hotel" }
+              - column: { name: description,  value: "Курортный отель с баром, рестораном, Spa-центром и бесплатным Wi-Fi близ центра Минска." }
+              - column: { name: brand,        value: "Renaissance (Marriott)" }
+              - column: { name: house_number, valueNumeric: 1 }
+              - column: { name: street,       value: "Dzerzhinsky Avenue" }
+              - column: { name: city,         value: "Minsk" }
+              - column: { name: country,      value: "Belarus" }
+              - column: { name: post_code,    value: "220007" }
+              - column: { name: phone,        value: "+375 17 222-20-22" }
+              - column: { name: email,        value: "info@renaissance-minsk.by" }
+              - column: { name: check_in,     value: "14:00" }
+              - column: { name: check_out,    value: "12:00" }
+
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 3 }
+              - column: { name: amenity,  value: "Spa" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 3 }
+              - column: { name: amenity,  value: "Free WiFi" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 3 }
+              - column: { name: amenity,  value: "Pet-friendly" }
+
+        # Hotel 4
+        - insert:
+            tableName: hotel
+            columns:
+              - column: { name: id,           valueNumeric: 4 }
+              - column: { name: name,         value: "Imperial Palace Hotel" }
+              - column: { name: description,  value: "The Imperial Palace Hotel is located within walking distance of Minsk city center near key attractions such as the Church of Saints Simon and Helena and offers amenities including a bar, restaurant, free Wi-Fi and spa facilities." }
+              - column: { name: brand,        value: "Independent" }
+              - column: { name: house_number, valueNumeric: 25 }
+              - column: { name: street,       value: "Myasnikova Street" }
+              - column: { name: city,         value: "Minsk" }
+              - column: { name: country,      value: "Belarus" }
+              - column: { name: post_code,    value: "220048" }
+              - column: { name: phone,        value: "+375 17 342-80-00" }
+              - column: { name: email,        value: "imperialhotel.by" }
+              - column: { name: check_in,     value: "14:00" }
+              - column: { name: check_out,    value: "12:00" }
+
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Free Internet" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Transfer" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Free parking" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Suitable for children" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Bar or restaurant" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Air conditioning" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "24-hour reception" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Elevator" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Smoke-free property" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Heating" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Security guard" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Express check-in/check-out" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Television in lobby" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Terrace" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Early check-in" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Late check-out" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Fire extinguisher" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Non-smoking rooms" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Room service" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Family room" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Cable TV" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "TV" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Minibar" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Safe (in room)" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Iron and board" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Ironing" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Hairdryer" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Telephone" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Breakfast" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Coffee/tea for guests" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Shuttle" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Languages Spoken: Russian, English" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Karaoke" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Nightclub" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Parking nearby" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Conference hall" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Beauty services" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Family/Kid Friendly" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Pets Not Allowed" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Personal protection equipment for staff" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 4 }
+              - column: { name: amenity,  value: "Extra decontamination measures" }
+
+        # Hotel 5
+        - insert:
+            tableName: hotel
+            columns:
+              - column: { name: id,           valueNumeric: 5 }
+              - column: { name: name,         value: "Zalkind Hotel Rooms & Kitchen" }
+              - column: { name: description,  value: "Stylish boutique hotel in a 19th-century building, located within a 5-minute walk of Minsk's central attractions, offering designer rooms with minibars and air conditioning." }
+              - column: { name: brand,        value: "Independent" }
+              - column: { name: house_number, valueNumeric: 24 }
+              - column: { name: street,       value: "Revolyutsionnaya Street" }
+              - column: { name: city,         value: "Minsk" }
+              - column: { name: country,      value: "Belarus" }
+              - column: { name: post_code,    value: "220030" }
+              - column: { name: phone,        value: "+375 29 620-62-62" }
+              - column: { name: email,        value: "zhotel.by" }
+              - column: { name: check_in,     value: "14:00" }
+              - column: { name: check_out,    value: "12:00" }
+
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Free Internet" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Free WiFi" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Kitchenette" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Minibar" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Safe" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Air conditioning" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Bar or restaurant" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "24-hour front desk" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Transfer service" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 5 }
+              - column: { name: amenity,  value: "Parking nearby" }
+
+        # Hotel 6
+        - insert:
+            tableName: hotel
+            columns:
+              - column: { name: id,           valueNumeric: 6 }
+              - column: { name: name,         value: "Hotel Europe" }
+              - column: { name: description,  value: "Prestigious five-star hotel opened in 2007, located in a seven-story atrium-style building in central Minsk, offering an exclusive combination of high-class service and modern amenities." }
+              - column: { name: brand,        value: "Independent" }
+              - column: { name: house_number, valueNumeric: 28 }
+              - column: { name: street,       value: "Internatsionalnaya Str." }
+              - column: { name: city,         value: "Minsk" }
+              - column: { name: country,      value: "Belarus" }
+              - column: { name: post_code,    value: "220030" }
+              - column: { name: phone,        value: "+375 (17) 229-83-39" }
+              - column: { name: email,        value: "reservation@hoteleurope.by" }
+              - column: { name: check_in,     value: "14:00" }
+              - column: { name: check_out,    value: "12:00" }
+
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Free WiFi" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Paid parking" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Indoor swimming pool" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Sauna" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Turkish bath" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Spa" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Fitness center" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "On-site restaurant" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "2 bars" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Conference halls" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Room service" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Airport shuttle" }
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column: { name: hotel_id, valueNumeric: 6 }
+              - column: { name: amenity,  value: "Pet-free" }
+

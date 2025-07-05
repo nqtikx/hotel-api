@@ -1,0 +1,102 @@
+### Получение списка всех отелей (краткая информация)
+GET http://localhost:8092/property-view/hotels
+Accept: application/json
+
+###
+
+### Получение расширенной информации по отелю с id=1
+GET http://localhost:8092/property-view/hotels/1
+Accept: application/json
+
+###
+
+### Поиск отелей по названию
+GET http://localhost:8092/property-view/search?name=DoubleTree
+Accept: application/json
+
+###
+
+### Поиск отелей по бренду
+GET http://localhost:8092/property-view/search?brand=Hilton
+Accept: application/json
+
+###
+
+### Поиск отелей по городу
+GET http://localhost:8092/property-view/search?city=Minsk
+Accept: application/json
+
+###
+
+### Поиск отелей по стране
+GET http://localhost:8092/property-view/search?country=Belarus
+Accept: application/json
+
+###
+
+### Поиск отелей по удобствам
+GET http://localhost:8092/property-view/search?amenities=Free WiFi
+Accept: application/json
+
+###
+
+### Создание нового отеля
+POST http://localhost:8092/property-view/hotels
+Content-Type: application/json
+
+{
+  "name": "Test Hotel",
+  "description": "This is a test hotel for REST testing",
+  "brand": "TestBrand",
+  "address": {
+    "houseNumber": 123,
+    "street": "Test Street",
+    "city": "TestCity",
+    "country": "TestCountry",
+    "postCode": "123456"
+  },
+  "contacts": {
+    "phone": "+123 456 7890",
+    "email": "test@example.com"
+  },
+  "arrivalTime": {
+    "checkIn": "15:00",
+    "checkOut": "11:00"
+  }
+}
+
+###
+
+### Добавление amenities к отелю с id=1
+POST http://localhost:8092/property-view/hotels/1/amenities
+Content-Type: application/json
+
+[
+  "Pool",
+  "Sauna",
+  "Gym"
+]
+
+###
+
+### Получение гистограммы по брендам
+GET http://localhost:8092/property-view/histogram/brand
+Accept: application/json
+
+###
+
+### Получение гистограммы по городам
+GET http://localhost:8092/property-view/histogram/city
+Accept: application/json
+
+###
+
+### Получение гистограммы по странам
+GET http://localhost:8092/property-view/histogram/country
+Accept: application/json
+
+###
+
+### Получение гистограммы по удобствам
+GET http://localhost:8092/property-view/histogram/amenities
+Accept: application/json

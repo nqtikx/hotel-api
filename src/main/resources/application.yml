@@ -1,0 +1,28 @@
+
+server:
+  port: 8092
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:hoteldb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: Nikitikk1315
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+logging:
+  level:
+    root: info

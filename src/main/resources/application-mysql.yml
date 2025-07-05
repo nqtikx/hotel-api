@@ -1,0 +1,24 @@
+
+
+
+
+spring:
+  config:
+    activate:
+      on-profile: mysql
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/hoteldb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: nikitikk
+    password: Nikitikk1315
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 8092
